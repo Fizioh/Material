@@ -20,8 +20,8 @@ var render = Render.create({
     element: document.body,
     engine: engine,
     options: {
-        width: 1500,
-        height: 850,
+        width: 1580,
+        height: 805,
         showAngleIndicator: true,
     }
 });
@@ -33,7 +33,7 @@ var runner = Runner.create();
 Runner.run(runner,engine);
 
 //ajout bodies
-
+/*
 var stack = Composites.stack(20, 20, 20, 5, 0, 0, function (x, y) {
     return Bodies.circle(x, y, Common.random(10, 20), { friction: 0.00001, restitution: 0.5, density: 0.001 });
 });
@@ -45,6 +45,7 @@ World.add(world, [
     Bodies.rectangle(500, 300, 700, 10, {isStatic: true, angle: -Math.PI * 0.03, render: { visible: true} }),
     Bodies.rectangle(340, 500, 700, 10, {isStatic: true, angle: Math.PI * 0.05, render: { visible: true} })
 ]);
+*/
 
 World.add(world, [
     Bodies.rectangle(400, 600, 1200, 10.5, { isStatic: true})
@@ -53,6 +54,7 @@ World.add(world, [
 var stack = Composites.stack(100, 0, 10, 8, 10, 10, function(x, y) {
     return Bodies.circle(x, y, Common.random(15, 30), { restitution: 0.6, friction: 0.1 });
 });
+ 
 
 World.add(world, [
     stack,
@@ -71,6 +73,8 @@ mouseConstraint = MouseConstraint.create(engine, {
         }
     }
 });
+
+World.add(world, mouseConstraint);
 
 render.mouse = mouse;
 
