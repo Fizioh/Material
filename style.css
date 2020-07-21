@@ -1,0 +1,61 @@
+
+body {
+	
+	margin: 0;
+	padding: 0;
+	background-image: url('beach.jpg');
+	background-color: #fff;
+}
+
+section{
+
+	height: 100vh;
+	background: #000;
+}
+
+h1{
+
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 3em;
+	letter-spacing: 0.2em;
+	opacity: 1;
+}
+
+h1 span{
+
+	opacity: 0;
+	display: inline-block;
+	animation: animate 2s linear forwards;
+	animation-delay: 2s;
+
+}
+
+@keyframes animate{
+
+	0%
+
+	{
+		opacity: 0;
+		transform: rotateY(90deg);
+		filter: blur(5px);
+
+	}
+
+	100%
+
+	{
+
+		opacity: 1;
+		transform: rotateY(0deg);
+		filter: blur(0);
+
+	}
+
+}
