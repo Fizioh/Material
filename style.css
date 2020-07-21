@@ -33,7 +33,7 @@ h1 span{
 	opacity: 0;
 	display: inline-block;
 	animation: animate 2s linear forwards;
-	animation-delay: 2s;
+	animation-delay: 0.4s;
 
 }
 
@@ -43,8 +43,8 @@ h1 span{
 
 	{
 		opacity: 0;
-		transform: rotateY(90deg);
-		filter: blur(5px);
+		transform: rotateY(200deg);
+		filter: blur(15px);
 
 	}
 
