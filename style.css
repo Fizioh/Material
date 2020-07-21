@@ -1,10 +1,9 @@
 
 body {
 	
-	margin: 0;
+    margin: 0;
 	padding: 0;
-	background-image: url('beach.jpg');
-	background-color: #fff;
+	background-color: grey;
 }
 
 section{
@@ -28,34 +27,24 @@ h1{
 	opacity: 1;
 }
 
-h1 span{
-
-	opacity: 0;
-	display: inline-block;
-	animation: animate 2s linear forwards;
-	animation-delay: 0.4s;
-
+h1 span {
+    opacity: 0;
+    display: inline-block;
+    animation: animate 2s linear forwards;
+    animation-delay: 0.5s;
 }
 
-@keyframes animate{
-
-	0%
-
-	{
-		opacity: 0;
-		transform: rotateY(200deg);
-		filter: blur(15px);
-
-	}
-
-	100%
-
-	{
-
-		opacity: 1;
-		transform: rotateY(0deg);
-		filter: blur(0);
-
-	}
-
+@keyframes animate {
+    0%
+    {
+        opacity: 0;
+        transform: rotateY(180deg);
+        filter: blur(10px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0);
+    }
 }
